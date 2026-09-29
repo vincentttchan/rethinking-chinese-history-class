@@ -4,6 +4,8 @@
 
 原生 HTML、CSS、JavaScript 的 16:9 簡報。直接開啟 index.html，或使用本機預覽：
 
+- 公開簡報：https://vincentttchan.github.io/rethinking-chinese-history-class/
+- GitHub 儲存庫：https://github.com/vincentttchan/rethinking-chinese-history-class
 - 開場：`http://127.0.0.1:8765/`
 - 設計框架：`http://127.0.0.1:8765/?scene=8`
 - 指定狀態：例如 `?scene=6&step=13`（step 從 0 起算）
