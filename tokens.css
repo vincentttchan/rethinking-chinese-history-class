@@ -1,0 +1,37 @@
+/* Approved Scene 08 design tokens. Reference units are stage pixels. */
+:root {
+  --paper: #EEE9DC;
+  --ink: #181816;
+  --vermilion: #A54132;
+  --slate: #687477;
+  --muted-ink: #50534f;
+  --placeholder-rule: #94988f;
+  --charcoal: #20201D;
+  --font-ui: Arial, 'PingFang TC', sans-serif;
+  --font-display: 'DIN Condensed', 'Arial Narrow', Impact, sans-serif;
+  --font-label: 'DIN Condensed', 'Arial Narrow', sans-serif;
+  --font-chinese: 'Songti TC', 'Noto Serif CJK TC', 'PMingLiU', serif;
+  --stage-width: 1920px;
+  --stage-height: 1080px;
+  --safe-x: 96px;
+  --content-x: 160px;
+  --meta-top: 58px;
+  --brand-bottom: 52px;
+  --type-xl: 120px;
+  --type-display: 84px;
+  --type-question: 64px;
+  --type-support: 44px;
+  --type-framework: 40px;
+  --type-meta: 24px;
+  --type-small: 22px;
+  --rule-width: 112px;
+  --rule-thickness: 3px;
+  --reveal-offset: 12px;
+  --duration-fade: 450ms;
+  --duration-reveal: 500ms;
+  --duration-morph: 780ms;
+  --duration-line: 800ms;
+  --duration-beat: 650ms;
+  --duration-scene: 1000ms;
+  --ease-morph: cubic-bezier(.25,.75,.2,1);
+}

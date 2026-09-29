@@ -1,0 +1,91 @@
+/* Opening scenes share the approved stage, fonts and motion tokens. */
+#stage.booting, #stage.booting * { transition:none!important; animation:none!important; }
+.scene { position:absolute; inset:0; }
+.scene[hidden] { display:none; }
+.scene h1,.scene h2,.scene p { margin:0; }
+header,footer,nav { z-index:5; }
+#stage { transition:background-color var(--duration-scene),color var(--duration-scene); }
+#stage[data-scene="5"] { background:var(--charcoal); color:var(--paper); }
+#stage[data-scene="5"] footer { color:var(--paper); opacity:.6; }
+.scene [data-show] { opacity:0; visibility:hidden; transform:translateY(var(--reveal-offset)); transition:opacity var(--duration-reveal),transform var(--duration-reveal); }
+.scene [data-show].revealed { opacity:1; visibility:visible; transform:translateY(0); }
+.editorial-rule { display:block; width:var(--rule-width); height:var(--rule-thickness); background:var(--vermilion); }
+.editorial-label { font:400 28px/1.2 var(--font-label); letter-spacing:3px; color:var(--slate); }
+/* 00: arrival */
+.arrival-title { position:absolute; left:var(--content-x); top:228px; }
+.arrival-title h1 { font:700 136px/1.14 var(--font-chinese); letter-spacing:4px; }
+.arrival-title h1 span { color:var(--vermilion); }
+.arrival-title .editorial-rule { margin:36px 0; }
+.arrival-title>p { font:600 44px/1.5 var(--font-chinese); }
+.archive-fragment { position:absolute; left:1330px; top:236px; width:390px; height:540px; border-left:1px solid var(--placeholder-rule); background:rgba(104,116,119,.025); }
+.arrival-affiliation { position:absolute; left:var(--content-x); top:850px; font:24px/1.5 var(--font-ui); color:var(--slate); }
+.arrival-time { position:absolute; right:var(--safe-x); bottom:62px; font:26px/1 var(--font-ui); letter-spacing:1px; }
+/* 01: six words accumulate, then remain in their positions as the question takes focus. */
+.opening-if { position:absolute; top:160px; width:100%; text-align:center; font:700 64px/1.4 var(--font-chinese); }
+.keyword { position:absolute; font:700 64px/1.3 var(--font-chinese); }
+.k1{left:180px;top:338px;font-size:72px}.k2{left:820px;top:310px;font-size:80px}.k3{left:1470px;top:344px}
+.k4{left:240px;top:744px}.k5{left:830px;top:768px;font-size:72px}.k6{left:1430px;top:725px}
+#scene-1[data-step="7"] .keyword.revealed { opacity:.14; }
+.left-question { position:absolute; left:220px; right:220px; top:430px; text-align:center; font:700 92px/1.5 var(--font-chinese); }
+.underlined { text-decoration:underline; text-decoration-color:var(--vermilion); text-decoration-thickness:4px; text-underline-offset:16px; }
+/* 02: one timeline, two sessions; 13:30 is the hinge. */
+.minutes { position:absolute; left:var(--content-x); top:190px; font:700 112px/1 var(--font-display); }
+.timeline { position:absolute; left:160px; right:160px; top:408px; height:100px; }
+.timeline-line { position:absolute; width:100%; height:1px; top:0; background:var(--slate); }
+.timeline span { position:absolute; top:30px; font:36px/1 var(--font-label); }
+.time-start{left:0}.timeline .time-pivot{left:727px;color:var(--vermilion);font-size:48px}.time-end{right:0}
+.pivot-tick { position:absolute; left:727px; top:-20px; height:42px; width:3px; background:var(--vermilion); }
+.schedule { position:absolute; top:552px; }
+.first-session { left:160px; width:670px; }.second-session{left:950px;width:820px}
+.schedule h2 { margin-top:28px; font:700 52px/1.45 var(--font-chinese); }
+.schedule .field-example { margin-top:20px; font:600 42px/1.5 var(--font-chinese); }
+/* 03: last year's conceptual relationship, with the original 2025 sharing capture. */
+.last-year { position:absolute; left:160px; top:224px; width:730px; }
+.last-year .year { color:var(--vermilion); font:48px/1 var(--font-label); margin-bottom:30px; }
+.last-year h1 { font:700 76px/1.3 var(--font-chinese); }
+.previous-subtitle { font:600 40px/1.5 var(--font-chinese); margin-top:24px!important; }
+.previous-relationship { position:absolute; left:1010px; top:300px; }
+.previous-relationship h2 { font:700 80px/1.1 var(--font-display); }
+.down-relation { position:relative; display:block; height:90px; width:1px; margin:30px 0 30px 210px; background:var(--slate); }
+.down-relation::after { content:''; position:absolute; bottom:0; left:-6px; width:12px; height:12px; border-right:1px solid var(--slate); border-bottom:1px solid var(--slate); transform:rotate(45deg); }
+.last-year-question { position:absolute; left:1010px; top:738px; font:600 36px/1.6 var(--font-chinese); }
+/* 04: teaching concerns, then a deliberate pause. */
+.concern { position:absolute; font:600 56px/1.4 var(--font-chinese); }
+.concern-0{left:160px;top:210px}.concern-1{left:710px;top:365px}.concern-2{left:260px;top:600px}.concern-3{left:1130px;top:750px}
+#scene-4 .concern.past.revealed { opacity:.28; }
+#scene-4.settled .concern.revealed { opacity:.12; }
+.valid-questions { position:absolute; left:160px; top:355px; font:700 76px/1 var(--font-display); }
+.not-only { position:absolute; left:160px; top:490px; font:700 106px/1.15 var(--font-display); color:var(--vermilion); }
+/* 05: visual silence. */
+.thesis { position:absolute; top:220px; left:160px; right:160px; text-align:center; }
+.thesis h1,.thesis h2 { font:700 120px/1.1 var(--font-display); }
+.thesis .not-equal { font:120px/1 var(--font-ui); height:205px; padding-top:34px; }
+.thesis-chinese { position:absolute; left:160px; right:160px; top:815px; text-align:center; font:600 48px/1.5 var(--font-chinese); }
+/* 06: persistent sides physically change their position and scale. */
+.focus-divider { position:absolute; left:960px; top:220px; height:575px; width:1px; background:var(--placeholder-rule); transition:opacity var(--duration-morph); }
+.teacher-side,.student-side { position:absolute; left:0; top:0; width:700px; transform-origin:left top; transition:transform var(--duration-morph) var(--ease-morph),opacity var(--duration-morph); }
+.teacher-side{transform:translate(160px,240px)}.student-side{transform:translate(1060px,240px)}
+.teacher-side h1,.student-side h2 { font:700 96px/1 var(--font-display); }
+.focus-question { margin-top:30px!important; font:700 52px/1.4 var(--font-chinese); }
+.production-words { display:flex; flex-direction:column; gap:18px; margin-top:60px; color:var(--slate); font:40px/1.1 var(--font-label); }
+.thinking-words { display:grid; grid-template-columns:repeat(3,200px); column-gap:28px; row-gap:32px; margin-top:52px; font:700 56px/1.4 var(--font-chinese); }
+#scene-6.shifted .teacher-side { transform:translate(110px,320px) scale(.55); opacity:.3; }
+#scene-6.shifted .student-side { transform:translate(650px,180px) scale(1.18); }
+#scene-6.shifted .focus-divider { opacity:0; }
+.focus-conclusion { position:absolute; left:650px; top:770px; transition:transform var(--duration-morph) var(--ease-morph); }
+.from-production { font:32px/1.2 var(--font-label); letter-spacing:2px; color:var(--slate); }
+.focus-conclusion h2 { margin-top:26px; font:700 88px/1 var(--font-display); }
+.focus-conclusion span { font:24px/1 var(--font-ui); margin-right:22px; letter-spacing:2px; }
+/* 07: the final question remains unanswered. */
+.real-question { position:absolute; left:380px; top:300px; font:700 88px/1.6 var(--font-chinese); }
+.real-question>span { display:block; }
+.real-question strong { color:var(--vermilion); font-weight:700; }
+
+/* Requested final-state alignment only; the split and first morph stay unchanged. */
+#scene-6[data-step="13"] .student-side { transform:translate(535px,180px) scale(1.18); }
+#scene-6[data-step="13"] .thinking-words { font-size:60px; }
+#scene-6[data-step="13"] .focus-conclusion { transform:translateX(-115px); }
+.real-question>span:last-child { font-size:92.4px; }
+
+.previous-capture{margin:44px 0 0;width:570px}
+.previous-capture img{display:block;width:100%;height:auto}
