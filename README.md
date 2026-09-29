@@ -31,8 +31,17 @@
 | 14 | WHAT DOES AI ACTUALLY CHANGE? | 8 |
 | 15 | THREE DESIGN QUESTIONS | 5 |
 | 16 | FROM FIELDWORK TO FIELD INQUIRY | 10 |
+| 17 | FROM FRAMEWORK TO EXPERIENCE | 4 |
+| 18 | SEE ≠ UNDERSTAND | 6 |
+| 19 | IDENTITY SHIFT | 3 |
+| 20 | SEE → QUESTION | 6 |
+| 21 | EVIDENCE | 8 |
+| 22 | INTERPRET | 4 |
+| 23 | OBJECT → PLACE → COMMUNITY | 3 |
+| 24 | DIGITAL → PHYSICAL | 7 |
+| 25 | DESIGN THE THINKING | 5 |
 
-共 17 幕、124 個手動狀態。Scene 16 文武廟問題是目前終點。
+共 26 幕、170 個狀態。Scene 16 接續 Part II（17–25）；Scene 25 為結語。
 Scene 03 已置入使用者提供的 2025 年分享原始截圖。Scene 08 保留六步框架，EVIDENCE 步驟已移除雙欄史料佔位。
 
 ## 操作
@@ -58,7 +67,7 @@ Scene 03 已置入使用者提供的 2025 年分享原始截圖。Scene 08 保�
 - 13：以練習反思複雜度，對準學習需要。
 - 14：MAKE / ADAPT / FEEDBACK / ITERATE 四種作用。
 - 15：三條設計問題，最後才加入較小的 AI 提問。
-- 16：文物徑專題研習連接考察前、當下與之後的 AI 角色，止於文武廟問題。
+- 16：文物徑專題研習連接考察前、當下與之後的 AI 角色，以文武廟問題接續 Part II。
 
 預覽建議 30–60 秒。Enter 顯示實際截圖，原專案另有外部連結；Esc 返回原狀態。
 
@@ -66,7 +75,7 @@ Scene 03 已置入使用者提供的 2025 年分享原始截圖。Scene 08 保�
 
 - `cases.js`：Scene 09–16 文案、案例資料及預覽。
 - `cases.css`：沿用的案例構圖與本輪局部斷行／層級調整。
-- `app.js`：00–16 導航與揭示狀態。
+- `app.js`：00–25 導航與揭示狀態。
 - `scene08.js`：六步框架動畫；`styles.css`、`opening.css`、`tokens.css`：共用樣式及開場設計。
 - `assets/cases/SOURCES.md`：真實專案截圖來源。
 
@@ -81,3 +90,15 @@ Scene 12 的三份核實史料仍保留佔位。Scene 16 目前使用真實文�
 `../narrative-review/`、`cases-review/`、`polish-review/`、`opening-review/` 保留作歷史版本，與目前文案及編號不同。
 
 本機服務使用快取副本。修改後執行 `sh ../../work/preview-server/sync-preview.sh` 同步到預覽網站。新增延伸例子連結在新分頁開啟，點擊或按 Enter 不會推進簡報。
+
+## Part II：文武廟實地探究
+
+從 `?scene=17&step=0` 開始。新增內容位於 `part2.js` 和 `part2.css`，沿用既有設計 tokens 與導覽。
+
+- `PART-II-PRESENTER.md`：講者節奏、外部 demo 操作與限制。
+- `assets/part2/README.md`：圖像出處、授權及情境重建標示。
+- EVIDENCE 提供七幅圖手動／自動播放；切換場景或重設會取消播放。
+- History File 01 以概念示意呈現，沒有虛假的 live demo 入口。
+- URL 隨場景與步驟更新；可重新載入、分享指定位置。
+
+瀏覽器驗收紀錄與九張截圖在網站原始碼外的 `outputs/part-ii-review/`，不隨正式網站上傳。
