@@ -72,7 +72,7 @@
     casePresentation.chrome(scene,step);
     partTwo.render(scene,step,{auto,reduceMotion:reduceMotion()});
     const url=new URL(location.href);url.searchParams.set("scene",scene);url.searchParams.set("step",step);history.replaceState(null,"",url);
-    document.querySelector('#section-marker').textContent=scene===0?'EDUHK · 30 SEP 2026':scene>=8?(scene>=16?'03 / FIELD INQUIRY':'02 / DESIGN'):'01 / RETHINK';
+    document.querySelector('#section-marker').textContent=scene===0?'EDUHK · 30 SEP 2026':scene>=26?'04 / REFLECTION':scene>=8?(scene>=16?'03 / FIELD INQUIRY':'02 / DESIGN'):'01 / RETHINK';
     stage.setAttribute('aria-label',`Scene ${String(scene).padStart(2,'0')}：${definition.title}`);
     let transition=Promise.resolve();
     if(switching&&initialized&&!reduceMotion()){
@@ -132,7 +132,7 @@
   partTwo.init(move);
   fit();
   syncFullscreenButton();
-  // Optional scene/step URLs use the same official 00–25 registry as navigation.
+  // Optional scene/step URLs use the same official 00–28 registry as navigation.
   const query=new URLSearchParams(location.search);
   const requested=Number(query.get('scene')||0);
   const start=scenes.has(requested)?requested:0;

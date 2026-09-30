@@ -74,3 +74,9 @@
 @media(prefers-reduced-motion:reduce){.part-two *{transition:none!important;animation:none!important}}
 
 #scene-24:not([data-step="0"]):not([data-step="1"]) .p2-departure{transform:scale(.88)}
+
+/* Closing reflection follows the same typography and manual reveal rhythm. */
+.part-two .p2-next-lesson{top:230px}
+.part-two .p2-takeaway-actions{position:absolute;left:160px;top:700px;display:flex;align-items:center;font:600 50px/1.4 var(--font-chinese);z-index:2}
+.part-two .p2-takeaway-actions b{font-weight:400;color:var(--slate);margin:0 32px}
+.part-two .p2-discussion-label{color:var(--slate);font-size:36px;margin-top:65px}

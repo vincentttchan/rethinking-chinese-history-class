@@ -4,7 +4,8 @@ window.PART_TWO_SPECS = [
   [17,'FROM FRAMEWORK TO EXPERIENCE',4], [18,'SEE ≠ UNDERSTAND',6],
   [19,'IDENTITY SHIFT',3], [20,'SEE → QUESTION',6], [21,'EVIDENCE',8],
   [22,'INTERPRET',4], [23,'OBJECT → PLACE → COMMUNITY',3],
-  [24,'DIGITAL → PHYSICAL',7], [25,'DESIGN THE THINKING',5]
+  [24,'DIGITAL → PHYSICAL',7], [25,'DESIGN THE THINKING',5],
+  [26,'教師的角色',1], [27,'帶回下一課',5], [28,'問題與討論',1]
 ];
 window.partTwo = (() => {
   const base='assets/part2/';
@@ -34,7 +35,10 @@ window.partTwo = (() => {
     22: `${image('room.png','考察網站的修復室研究空間',0,2,'p2-full')}<div class="p2-wash p2-history-wash" ${range(0,2)}></div>${block('<p class="p2-label">INTERPRET</p><h1>一個正在形成的社區</h1>',0,0,'p2-history-title')}${block('<p class="p2-label">初步推論</p><h1>不同的需要，<br>似乎正在指向<br>同一個地方。</h1><p class="p2-provisional" '+range(2,2)+'>尚待史料驗證</p>',1,2)}${note('Living Archive · 修復室美術情境',0,2)}<div ${range(3,3)}>${words('p2-reconnect')}<h1 class="p2-interpret">INTERPRET</h1></div>`,
     23: `<div class="p2-scale"><div class="p2-object"><h1>OBJECT</h1><p>畫作 · 牌匾 · 石獅 · 屋脊</p><small>SEE AN OBJECT</small></div><div class="p2-place" ${range(1,2)}><h1>PLACE</h1><p>文武廟 · 列聖宮 · 公所</p><small>READ A PLACE</small></div><div class="p2-community" ${range(2,2)}><h1>COMMUNITY</h1><p>19TH-CENTURY SHEUNG WAN</p><small>INTERPRET A COMMUNITY</small></div></div>`,
     24: `${image('room.png','Living Archive 修復室情境',0,1,'p2-full p2-departure')}${image('temple-exterior.png','考察網站的文武廟廟外美術情境',2,6,'p2-full p2-temple')}<div class="p2-wash" ${range(0,6)}></div>${block('<h1>帶着資料，<br>走進現場。</h1>',0,0)}${block('<h1>離開修復室。<br>學習如何尊重地走進現場。</h1>',1,1,'p2-etiquette')}${link('開啟入廟禮儀演練',1,1,demo+'docs/architectural-calibration/experience/')}${block('<h1 class="p2-screen">THE SCREEN<br>STOPS HERE.</h1>',2,2)}${block('<h1 class="p2-screen">THE INQUIRY<br>DOESN’T.</h1>',3,3)}${block('<h1>數碼體驗在這裏停止。<br>歷史探究才真正開始。</h1>',4,4)}${block('<h1>帶着問題，<br>走進文武廟。</h1>',5,6,'p2-final-field')}${note('Living Archive · 情境重建',0,1)}${exteriorCredit(2,6)}`,
-    25: `${words('p2-closing-framework')}${block('<h1 class="p2-design">DESIGN<br>THE THINKING.</h1><p class="p2-support">設計學生如何思考。</p>',1,1)}${block('<h1>AI 支援學習設計，<br><strong>不取代</strong>學習設計。</h1>',2,2)}${block('<h1>我們不是把文武廟<br>搬進螢幕。</h1>',3,3)}${block('<p class="p2-lead">我們是在學生真正走進文武廟之前，</p><h1>先幫他準備一雙<br><strong>會看歷史的眼睛。</strong></h1>',4,4,'p2-closing')}`
+    25: `${words('p2-closing-framework')}${block('<h1 class="p2-design">DESIGN<br>THE THINKING.</h1><p class="p2-support">設計學生如何思考。</p>',1,1)}${block('<h1>AI 支援學習設計，<br><strong>不取代</strong>學習設計。</h1>',2,2)}${block('<h1>我們不是把文武廟<br>搬進螢幕。</h1>',3,3)}${block('<p class="p2-lead">我們是在學生真正走進文武廟之前，</p><h1>先幫他準備一雙<br><strong>會看歷史的眼睛。</strong></h1>',4,4,'p2-closing')}`,
+    26: `${block('<h1>老師最重要的工作，<br>是<strong>設計學生如何思考。</strong></h1>',0,0)}`,
+    27: `${block('<h1>下一課，<br>你想讓學生多做<br><strong>哪一個思考動作？</strong></h1>',0,4,'p2-next-lesson')}<div class="p2-takeaway-actions" aria-label="看見 → 追問 → 比較證據 → 建立解釋">${['看見','追問','比較證據','建立解釋'].map((text,i)=>`<span ${range(i+1,4)}>${i?' <b aria-hidden="true">→</b> ':''}${text}</span>`).join('')}</div>`,
+    28: `${block('<h1>回到你的課堂，<br><strong>哪一步最難設計？</strong></h1><p class="p2-support p2-discussion-label">問題與討論</p>',0,0)}`
   };
   const fragment=document.createDocumentFragment();
   PART_TWO_SPECS.forEach(([id,title])=>{
