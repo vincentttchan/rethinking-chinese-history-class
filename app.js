@@ -113,14 +113,15 @@
   document.addEventListener('keydown',e=>{
     if(e.repeat||e.metaKey||e.ctrlKey||e.altKey)return;
     if(casePresentation.key(e))return;
+    // Escape belongs to preview/fullscreen dismissal; it never changes a slide.
+    if(e.key==='Escape')return;
     if((e.target.closest('button')&&['Enter',' '].includes(e.key))||e.target.closest('a')||e.target.closest('select')||(e.target.closest('nav')&&['Enter',' '].includes(e.key)))return;
     if(e.key==='Enter'&&!busy&&casePresentation.available(scene,step)){e.preventDefault();casePresentation.open(scene,step);return;}
-    if(['ArrowRight','ArrowLeft',' ','r','R','f','F','Escape'].includes(e.key))e.preventDefault();
+    if(['ArrowRight','ArrowLeft',' ','r','R','f','F'].includes(e.key))e.preventDefault();
     if(e.key==='ArrowRight'||e.key===' ')advance();
     if(e.key==='ArrowLeft')retreat();
     if(e.key.toLowerCase()==='r')move(scene,0,{force:true,reset:true});
     if(e.key.toLowerCase()==='f')fullscreen();
-    if(e.key==='Escape'&&scene===6&&step>=11)move(6,10,{force:true});
   });
   scenePicker.addEventListener('change',()=>move(Number(scenePicker.value),0,{force:true}));
   stepPicker.addEventListener('change',()=>move(scene,Number(stepPicker.value),{force:true}));
